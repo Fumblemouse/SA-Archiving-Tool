@@ -84,8 +84,7 @@ var archive = function() {
 		}
 		
 		$("#loading").hide();
-		$("#header").show()
-		$("#posts").show();
+		$("#header, #posts, #footer, #help_dialog, #subhead").show()
 	}
 }
 archive(); //namespaces, whoo

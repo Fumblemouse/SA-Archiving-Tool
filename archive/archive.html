@@ -2,22 +2,51 @@
 <html>
 	<head>
 		<script src="js/jquery-1.6.2.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>
+		
 		<script src="js/getUrlVars.js"></script>
 		<script>
 			threadid = getUrlVars(window.location.href).threadid;
 		</script>
+		
 		<script src="js/archive.js"></script>
 		
 		<link rel="stylesheet" href="main.css" type="text/css" />
 		<link rel="stylesheet" href="archive.css" type="text/css" />
+		<link rel="stylesheet" href="Aristo/jquery-ui-1.8.7.custom.css" type="text/css" />
+		
+		<script>
+			$(function() {
+				$(".original_link").attr('href', 'http://forums.somethingawful.com/showthread.php?threadid=' + threadid);
+			
+				$("#help_dialog").dialog({
+					height:200,
+					autoOpen: false,
+					modal:true
+				});
+				
+				$('.open_help').click(function() {
+					console.log("click");
+					$("#help_dialog").dialog('open');
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<div id="loading">
-			Archiving... please wait. <br/><br/>
+			Building page... please wait. <br/><br/>
 			Some day, there will be a progress bar here.
 		</div>
 		
 		<div id="header">
+			<!-- header here -->
+		</div>
+		<div id="subhead">
+			<a class="original_link" href="">Original link</a> &bull; <a class="open_help" href="#help" >Download instructions</a>
+		</div>
+		
+		<div id="help_dialog" title="Instructions">
+			<p>To save this page and all of its contents to your hard drive, right click on the page and select "Save as...". Where it says "Format" in the dialog, pick "Web Page, Complete".</p>
 		</div>
 		
 		<div id="posts">
@@ -26,5 +55,7 @@
 		<div id="footer">
 			Thread and its contents archived using the Something Awful Thread Archive extension for Google Chrome.
 		</div>
+		
+
 	</body>
 </html>

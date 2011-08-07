@@ -1,4 +1,4 @@
-#header, #posts {
+#header, #posts, #footer, #help_dialog, #subhead {
 	display:none;
 }
 body {
@@ -9,3 +9,15 @@ body {
 	font-family: "Helvetica", "Arial", sans-serif;
 	font-size:2em;
 }
+#subhead {
+	padding:5px;
+}
+#footer {
+	padding:5px;
+	text-align:center;
+}
+
+/* #posts changes */
+
+table.post tr.seen1 td { background-color:#f4f4f4; }
+table.post tr.seen2 td { background-color:#e8e8e8; }
