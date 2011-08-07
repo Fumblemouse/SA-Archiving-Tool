@@ -1,0 +1,23 @@
+{
+	"name": "Something Awful Thread Archiving Tool",
+	"version": "0.1",
+	
+	"description": "A plain text description",
+	
+	"page_action": {
+		"default_title": "Archive Thread",
+		"default_icon": "Something_Awful_logo.png"
+	},
+	
+	"background_page": "background.html",
+	"content_scripts": [
+		{
+			"matches": ["http://forums.somethingawful.com/showthread.php?*"],
+			"js": ["url_listener.js"]
+		}
+	],
+	
+	"permissions": [
+		"http://*/*"
+	]
+}

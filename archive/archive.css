@@ -1,0 +1,11 @@
+#header, #posts {
+	display:none;
+}
+body {
+	padding:10px;
+}
+#header {
+	padding:5px;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size:2em;
+}

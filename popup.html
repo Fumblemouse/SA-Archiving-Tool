@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<script src="archive/js/getUrlVars.js"></script>
+	</head>
+	<body>
+		<a id="archivelink" href="#" target="_blank">Archive</a>
+		
+		<script>
+			var threadid = getUrlVars(window.location.href).threadid;
+
+			document.getElementById("archivelink").setAttribute("href", "archive/archive.html?threadid=" + threadid)
+		</script>
+	</body>
+</html>
