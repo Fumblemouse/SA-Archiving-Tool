@@ -2,19 +2,24 @@
 	display:none;
 }
 body {
-	padding:10px;
+	padding:15px;
 }
 #header {
-	padding:5px;
+	padding:5px 0;
 	font-family: "Helvetica", "Arial", sans-serif;
 	font-size:2em;
 }
 #subhead {
-	padding:5px;
+	padding:5px 0 0;
 }
 #footer {
 	padding:5px;
 	text-align:center;
+}
+
+.page_head {
+	font-size:1.3em;
+	padding: 20px 0 10px;
 }
 
 /* #posts changes */
