@@ -2,12 +2,11 @@
 <html>
 	<head>
 		<script src="js/jquery-1.6.2.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
 		
 		<script src="js/getUrlVars.js"></script>
-		<script>
-			threadid = getUrlVars(window.location.href).threadid;
-		</script>
+		<script src="js/threadid.js"></script>
+
 		
 		<script src="js/reqmanager.js"></script>
 		<script src="js/archive.js"></script>
@@ -17,21 +16,8 @@
 		<link rel="stylesheet" href="bbcode.css" type="text/css" />
 		<link rel="stylesheet" href="Aristo/jquery-ui-1.8.7.custom.css" type="text/css" />
 		
-		<script>
-			$(function() {
-				$(".original_link").attr('href', 'http://forums.somethingawful.com/showthread.php?threadid=' + threadid);
-			
-				$("#help_dialog").dialog({
-					height:200,
-					autoOpen: false,
-					modal:true
-				});
-				
-				$('.open_help').click(function() {
-					console.log("click");
-					$("#help_dialog").dialog('open');
-				});
-			});
+		<script src="js/dialog.js"></script>
+
 		</script>
 	</head>
 	<body>
