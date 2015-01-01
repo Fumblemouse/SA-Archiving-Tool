@@ -19,7 +19,9 @@ var archive = function() {
 	}
 	
 	function savePage(data) {
-		page_number = $(data).find('.curpage:first').html();
+		//page_number = $(data).find('.curpage:first').html();
+		//$(this).find(":selected").text()
+		page_number = pages.length;
 		pages[page_number] = new Page(page_number, data);
 	}
 	
@@ -32,7 +34,8 @@ var archive = function() {
 		page_counter = $(html).find(".pages.top");
 		
 		if (page_counter != " ") {
-			thread.length = $(page_counter).html().match(/\((\S+)\)/)[1];
+			//thread.length = $(page_counter).html().match(/\((\S+)\)/)[1];
+			thread.length = $(page_counter).html().match(/title="Last page">(\d+)/)[1];
 		}
 		else {
 			thread.length = 1;
@@ -44,7 +47,7 @@ var archive = function() {
 		
 		if (thread.length > 1) {
 			reqManager = new ReqManager({
-				total_requests: thread.length - 1,
+				total_requests: thread.length-1,
 				onFinished: buildPage
 			});
 			for (var page = 2; page <= thread.length; page++) {
