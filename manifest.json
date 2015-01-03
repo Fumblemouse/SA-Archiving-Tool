@@ -19,7 +19,12 @@
 			"js": ["url_listener.js"]
 		}
 	],
-	
+	"web_accessible_resources": [
+  		 "archive/main.css",
+  		 "archive/archive.css",
+  		 "archive/bbcode.css",
+  		 "archive/Aristo/jquery-ui-1.8.7.custom.css"
+	],
 	"permissions": [
 		"https://*/*"
 	]
