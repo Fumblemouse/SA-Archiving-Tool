@@ -30,7 +30,7 @@ var archive = function() {
 	var thread = new Thread(threadid)
 	
 	// First, get first page. First page is special because it sets up everything to come.
-	$.get("http://forums.somethingawful.com/showthread.php?threadid=" + threadid, function(html) {	
+	$.get("https://forums.somethingawful.com/showthread.php?threadid=" + threadid, function(html) {	
 		page_counter = $(html).find(".pages.top");
 		
 		if (page_counter != " ") {
