@@ -1,5 +1,5 @@
 $(function() {
-	$(".original_link").attr('href', 'http://forums.somethingawful.com/showthread.php?threadid=' + threadid);
+	$(".original_link").attr('href', 'https://forums.somethingawful.com/showthread.php?threadid=' + threadid);
 
 	$("#help_dialog").dialog({
 		height:200,
