@@ -20,9 +20,9 @@ var archive = function() {
 	
 	function savePage(data) {
 		//page_number = $(data).find('.curpage:first').html();
-		//$(this).find(":selected").text()
-		page_number = pages.length;
+		page_number = $(data).find('div.top select option:selected').text()
 		pages[page_number] = new Page(page_number, data);
+
 	}
 	
 	var reqManager;
