@@ -52,7 +52,7 @@ var archive = function() {
 			});
 			for (var page = 2; page <= thread.length; page++) {
 				reqManager.createReq({
-					url: "http://forums.somethingawful.com/showthread.php?threadid=" + threadid + "&pagenumber=" + page,
+					url: "https://forums.somethingawful.com/showthread.php?threadid=" + threadid + "&pagenumber=" + page,
 					type: "get",
 					dataType: "html",
 					onSuccess: savePage
@@ -75,7 +75,7 @@ var archive = function() {
 		}
 		
 		$("#posts").find(".profilelinks li a").each(function () {
-			$(this).attr('href', 'http://forums.somethingawful.com/' + $(this).attr('href'));
+			$(this).attr('href', 'https://forums.somethingawful.com/' + $(this).attr('href'));
 		});
 		
 		$("#posts").find(".postbuttons").css("visibility", "hidden");
